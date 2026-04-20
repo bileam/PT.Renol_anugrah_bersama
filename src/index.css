@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Font */
+@import "@fontsource/plus-jakarta-sans/index.css";
+@import "@fontsource/plus-jakarta-sans/500.css";
+@import "@fontsource/plus-jakarta-sans/600.css";
+@import "@fontsource/plus-jakarta-sans/700.css";
+@import "@fontsource/plus-jakarta-sans/800.css";
+
+/* 🎨 Design System */
+:root {
+  --color-rab-navy: #1d4e89;
+  --color-rab-biru: #2c5d97;
+  --color-rab-green: #8db03e;
+  --color-rab-neon: #adff2f;
+  --color-rab-dark: #0f172a;
+  --color-rab-light: #f1f5f9;
+  --color-rab-gray: #64748b;
+}
+
+/* ✅ Custom Utility (Tailwind v4 way) */
+@utility text-rab-navy {
+  color: var(--color-rab-navy);
+}
+
+@utility text-rab-green {
+  color: var(--color-rab-green);
+}
+
+@utility bg-rab-navy {
+  background-color: var(--color-rab-navy);
+}
+
+@utility bg-rab-green {
+  background-color: var(--color-rab-green);
+}
+@utility bg-rab-light {
+  background-color: var(--color-rab-light);
+}
+
+/* ✅ Base styling (JANGAN pakai *) */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--color-rab-light);
+  color: var(--color-rab-dark);
+}
+
+/* index.css */
+html {
+  scroll-behavior: smooth;
+}

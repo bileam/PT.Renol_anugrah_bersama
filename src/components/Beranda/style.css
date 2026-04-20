@@ -1,0 +1,47 @@
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.group:hover .swiper-button-next,
+.group:hover .swiper-button-prev {
+  opacity: 1;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important;
+  font-weight: bold;
+}
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background: #1d4e89;
+  opacity: 1;
+  width: 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
