@@ -5,10 +5,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { project } from "../../datas/project";
+import ModalProject from "../ModalProject";
 const Porto = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const Navigasi = useNavigate();
-
+  const [open, setOpen] = useState(false);
   return (
     <div className="flex flex-col gap-6  justify-center items-center ">
       <h2 className="text-center text-rab-green font-bold">Proyek Terbaru</h2>
@@ -42,7 +43,10 @@ const Porto = () => {
                 md:opacity-0 md:group-hover:opacity-70
       `}
             >
-              <button className="cursor-pointer p-4 hover:scale-120  transition-all duration-300 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-xl">
+              <button
+                onClick={() => setOpen(true)}
+                className="cursor-pointer p-4 hover:scale-120  transition-all duration-300 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-xl"
+              >
                 <FaEye className="text-white text-2xl" />
               </button>
             </div>
@@ -72,6 +76,7 @@ const Porto = () => {
       >
         lihat semua portofolio
       </button>
+      <ModalProject isOpen={open} onClose={() => setOpen(false)} />
     </div>
   );
 };

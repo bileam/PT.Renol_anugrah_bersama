@@ -1,7 +1,7 @@
 import gambar from "../../assets/image/home.jpg";
 const Profile = () => {
   return (
-    <div className="flex min-h-screen overflow-hidden md:flex-row flex-col md:gap-10 gap-2 w-full md:items-center ">
+    <div className="flex  overflow-hidden md:flex-row flex-col md:gap-10 gap-2 w-full md:items-center ">
       <div
         data-aos="fade-right"
         className="relative flex-1 rounded-2xl overflow-hidden"

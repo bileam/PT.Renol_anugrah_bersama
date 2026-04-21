@@ -86,11 +86,12 @@ const Navbar = () => {
           ))}
 
           <a
-            href="#"
-            className="bg-rab-navy flex gap-2 items-center text-white hoverbrightness-125 py-2 px-6 rounded-xl ml-4"
+            href="https://wa.me/6281242922597?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-rab-navy md:hidden lg:flex gap-2 items-center text-white hoverbrightness-125 py-2 px-6 rounded-xl ml-4"
           >
             <FaWhatsapp className="text-xl" />
-
             <span>Kontak Kami</span>
           </a>
         </div>

@@ -28,10 +28,17 @@ const Hubungin = () => {
               memastikan setiap proyek dikerjakan tepat waktu, efisien, dan
               sesuai standar terbaik.
             </p>
-            <button className="mt-4 px-6 py-3 bg-[#1d4e89] hover:bg-[#163b66] transition-all duration-300 rounded-lg text-sm md:text-base shadow-lg flex items-center gap-2">
-              <FaWhatsapp className="text-xl" />
-              Konsultasi dengan Kami
-            </button>
+            <div>
+              <a
+                href="https://wa.me/6281242922597?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 w-65 px-6 py-3 bg-[#1d4e89] hover:bg-[#163b66] transition-all duration-300 rounded-lg text-sm md:text-base shadow-lg flex items-center gap-2"
+              >
+                <FaWhatsapp className="text-xl" />
+                Konsultasi dengan Kami
+              </a>
+            </div>
           </div>
         </div>
       </div>
