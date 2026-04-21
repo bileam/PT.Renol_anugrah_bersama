@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logoRAB from "../assets/Logo/NobgLogo.png";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,7 +54,6 @@ const Navbar = () => {
             </p>
           </div>
         </Link>
-
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
           {menu.map((item, index) => (
@@ -84,6 +84,15 @@ const Navbar = () => {
               </NavLink>
             </div>
           ))}
+
+          <a
+            href="#"
+            className="bg-rab-navy flex gap-2 items-center text-white hoverbrightness-125 py-2 px-6 rounded-xl ml-4"
+          >
+            <FaWhatsapp className="text-xl" />
+
+            <span>Kontak Kami</span>
+          </a>
         </div>
 
         {/* Mobile Toggle Button */}

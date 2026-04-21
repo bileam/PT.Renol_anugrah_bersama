@@ -12,16 +12,22 @@ const VisiMisi = () => {
     },
   ];
   return (
-    <div className="bg-rab-navy relative overflow-hidden px-5 py-10 rounded-2xl flex md:flex-row flex-col gap-10">
+    <div className="bg-rab-navy relative overflow-hidden px-5 py-10 rounded-2xl flex md:flex-row flex-col gap-10 ">
       <img
         src={bgimg}
-        alt=""
+        alt="background konstruksi"
         className="absolute w-full inset-0 h-full object-cover md:object-top"
       />
-      <div className="bg-[#0f172a]/90 absolute inset-0"></div>
+      <div className="bg-[#0f172a]/85 absolute inset-0"></div>
       <div className="flex-1 relative z-10">
-        <h1 className="text-rab-green font-bold text-lg">Visi Kami</h1>
-        <p className="text-white text-md mt-2">
+        <h1 data-aos="fade-up" className="text-rab-green font-bold text-lg">
+          Visi Kami
+        </h1>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          className="text-white text-md md:mt-4 mt-2"
+        >
           Menjadi Peruhahaan konstruksi dan suplier terkemuka yang dikenal akan
           kualitas, ketepatan dan keandalan dalam setiap proyek, serta
           memberikan nilai terbaik untuk meningkatkan kepercayaan dan kepuasan
@@ -29,12 +35,22 @@ const VisiMisi = () => {
         </p>
       </div>
       <div className="md:w-[50%]  relative z-10">
-        <h1 className="text-rab-green font-bold text-lg">Misi kami</h1>
-        <ul className="text-white text-md space-y-3">
+        <h1 data-aos="fade-up" className="text-rab-green font-bold text-lg">
+          Misi kami
+        </h1>
+        <ul className="text-white text-md space-y-3 md:mt-4 mt-2">
           {misi.map((item, index) => (
-            <div key={index} className="flex gap-2">
-              <span className="text-rab-green font-extrabold">{">"}</span>
-              <li>{item.desc}</li>
+            <div key={index} className="flex gap-2 ">
+              <span
+                data-aos="fade-up"
+                data-aos-delay={index * 200}
+                className="text-rab-green font-extrabold"
+              >
+                {">"}
+              </span>
+              <li data-aos="fade-up" data-aos-delay={index * 200}>
+                {item.desc}
+              </li>
             </div>
           ))}
         </ul>

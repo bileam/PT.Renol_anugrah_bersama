@@ -6,20 +6,47 @@ import Tentang from "./pages/Tentang";
 import Produk from "./pages/Produk";
 import Porto from "./pages/Porto";
 import AOS from "aos";
-import { useEffect } from "react";
+import "aos/dist/aos.css";
+import { useEffect, useState } from "react";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
+    // Init AOS
     AOS.init({
-      // Pengaturan opsional:
-      duration: 800, // durasi animasi (ms)
-      once: true, // jika false, animasi akan muncul setiap kali discroll (atas/bawah)
-      // mirror: true, // apakah elemen harus animasi keluar saat discroll lewat
+      duration: 800,
+      once: true,
     });
 
-    // Penting: Refresh AOS setiap kali ada perubahan konten
     AOS.refresh();
+
+    // Simulasi loading (bisa diganti API nanti)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  // 🔥 LOADING SCREEN
+  if (loading) {
+    return (
+      <div className="h-screen flex items-center justify-center bg-white">
+        <div className="flex flex-col items-center gap-6">
+          {/* Spinner */}
+          <div className="w-16 h-16 border-4 border-[#1d4e89] border-t-transparent rounded-full animate-spin"></div>
+
+          {/* Text */}
+          <h1 className="text-xl font-semibold text-[#1d4e89]">
+            Memuat halaman...
+          </h1>
+        </div>
+      </div>
+    );
+  }
+
+  // 🔥 MAIN APP
   return (
     <Router>
       <Routes>

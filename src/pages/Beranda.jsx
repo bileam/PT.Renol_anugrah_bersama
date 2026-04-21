@@ -8,8 +8,8 @@ const Beranda = () => {
     <div className="xl:container mx-auto px-2 md:px-5 flex flex-col gap-16">
       <BannerCarousel />
       <Layanan />
-      <Porto />
       <MitraKami />
+      <Porto />
     </div>
   );
 };

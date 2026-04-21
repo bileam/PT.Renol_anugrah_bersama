@@ -55,7 +55,7 @@ const BannerCarousel = () => {
         // navigation={true}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 5000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         loop={true}
@@ -74,7 +74,6 @@ const BannerCarousel = () => {
               <div className="relative h-full flex flex-col items-stars justify-center text-stars px-6 max-w-4xl mx-auto">
                 {/* Judul dengan Animasi */}
                 <h2
-                  data-aos="fade-up"
                   className="text-white text-3xl md:text-6xl font-extrabold mb-4 uppercase tracking-tighter
                                transition-all duration-1000 ease-out translate-y-12 opacity-0
                                in-[.swiper-slide-active_&]:translate-y-0 in-[.swiper-slide-active_&]:opacity-100"
@@ -84,7 +83,6 @@ const BannerCarousel = () => {
 
                 {/* Deskripsi dengan Animasi (Delay 300ms) */}
                 <p
-                  data-aos="fade-up"
                   className="text-slate-200 text-base md:text-xl mb-8 leading-relaxed
                               transition-all duration-1000 delay-300 ease-out translate-y-8 opacity-0
                               in-[.swiper-slide-active_&]:translate-y-0 in-[.swiper-slide-active_&]:opacity-100"
@@ -96,7 +94,6 @@ const BannerCarousel = () => {
                                 in-[.swiper-slide-active_&]:translate-y-0 in-[.swiper-slide-active_&]:opacity-100"
                 >
                   <button
-                    data-aos="fade-up"
                     className="bg-rab-navy text-white px-4 py-2 rounded-full font-bold 
                                    text-sm shadow-lg  transition-all transform  duration-500 cursor-pointer
                                    hover:scale-105 active:scale-95"

@@ -11,7 +11,7 @@ const Layanan = () => {
   useEffect(() => {
     AOS.init({
       // Pengaturan opsional:
-      duration: 800, // durasi animasi (ms)
+      // duration: 800, // durasi animasi (ms)
       once: true, // jika false, animasi akan muncul setiap kali discroll (atas/bawah)
       // mirror: true, // apakah elemen harus animasi keluar saat discroll lewat
     });
@@ -59,7 +59,7 @@ const Layanan = () => {
       </h2>
       <h1
         data-aos="fade-up"
-        className="text-center text-rab-navy font-bold md:text-5xl text-2xl"
+        className="text-center text-rab-navy font-bold md:text-3xl text-2xl"
       >
         Apa Yang Kami Lakukan?
       </h1>
@@ -69,18 +69,23 @@ const Layanan = () => {
             data-aos={isMobile ? "fade-up" : "flip-left"}
             data-aos-delay={index * 200}
             key={index}
-            className="px-6 py-6 w-full bg-white group gap-4 
-                     hover:-translate-y-2 hover:scale-105 hover:shadow-xl 
-                     transition-all duration-500 ease-in-out 
-                     rounded-2xl flex flex-col items-center text-center"
           >
-            <img
-              src={item.img}
-              alt={item.judul}
-              className="w-24 h-24 rounded-md group-hover:shadow-2xl shadow-[#8db03e] transition-all duration-500 object-cover   bg-rab-light"
-            />
-            <h2 className="font-bold text-lg">{item.judul}</h2>
-            <p className="text-sm">{item.desk}</p>
+            <div
+              className="px-6 py-6 w-full h-full bg-white group gap-4 
+                 hover:-translate-y-2 hover:scale-105 hover:shadow-xl 
+                 transition-all duration-500 ease-in-out 
+                 rounded-2xl flex flex-col items-center text-center"
+            >
+              <img
+                src={item.img}
+                alt={item.judul}
+                className="w-24 h-24 rounded-md 
+                   group-hover:shadow-2xl shadow-[#8db03e] 
+                   transition-all duration-500 object-cover bg-rab-light"
+              />
+              <h2 className="font-bold text-lg">{item.judul}</h2>
+              <p className="text-sm">{item.desk}</p>
+            </div>
           </div>
         ))}
       </div>
