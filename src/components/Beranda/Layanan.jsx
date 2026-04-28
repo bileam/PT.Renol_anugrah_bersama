@@ -10,14 +10,9 @@ const Layanan = () => {
   const [isMobile, setMobile] = useState(false);
   useEffect(() => {
     AOS.init({
-      // Pengaturan opsional:
-      // duration: 800, // durasi animasi (ms)
-      once: true, // jika false, animasi akan muncul setiap kali discroll (atas/bawah)
-      // mirror: true, // apakah elemen harus animasi keluar saat discroll lewat
+      once: true,
     });
 
-    // Penting: Refresh AOS setiap kali ada perubahan konten
-    // AOS.refresh();
     AOS.refreshHard();
   }, []);
   const layanan = [

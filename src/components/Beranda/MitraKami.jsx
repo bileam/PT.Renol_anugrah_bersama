@@ -1,13 +1,16 @@
 import React from "react";
-import logorab from "../../assets/Logo/logoRAB.jpeg";
-import ai from "../../assets/Logo/ai.png";
-import search from "../../assets/Logo/search.png";
-
+import Logo_Mitra_01 from "../../assets/LogoMitra/Logo_Mitra-weber.png";
+import Logo_Mitra_02 from "../../assets/LogoMitra/Logo-Mitra-Fosroc.jpeg";
+import Logo_Mitra_03 from "../../assets/LogoMitra/Logo-Mitra-Saint-Gobain.png";
+import Logo_Mitra_04 from "../../assets/LogoMitra/Logo-Mitra-Vexcolt.png";
+import Logo_Mitra_05 from "../../assets/LogoMitra/Logo-Mitra-Wavin.png";
 const MitraKami = () => {
   const partners = [
-    { name: "Renol Anugrah bersama", logo: logorab },
-    { name: "Adhi Karya", logo: ai },
-    { name: "PUPR", logo: search },
+    { name: "PT.WEBER", logo: Logo_Mitra_01 },
+    { name: "PT.FOSROC", logo: Logo_Mitra_02 },
+    { name: "PT.SAINT-GOBAIN", logo: Logo_Mitra_03 },
+    { name: "PT.VEXCOLT", logo: Logo_Mitra_04 },
+    { name: "PT.WAVIN", logo: Logo_Mitra_05 },
   ];
 
   const scrollPartners = [...partners, ...partners, ...partners];
@@ -30,7 +33,7 @@ const MitraKami = () => {
           <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-liner-to-r from-rab-navy via-rab-navy/50 to-transparent z-20 pointer-events-none"></div>
           <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-linear-to-l from-rab-navy via-rab-navy/50 to-transparent z-20 pointer-events-none"></div>
           <div className="flex overflow-hidden">
-            <div className="flex  animate-marquee whitespace-nowrap py-5 group-hover:[animation-play-state:paused]">
+            <div className="flex  animate-marquee whitespace-nowrap  py-5 group-hover:[animation-play-state:paused]">
               {scrollPartners.map((partner, index) => (
                 <div
                   key={index}

@@ -86,7 +86,7 @@ const Navbar = () => {
           ))}
 
           <a
-            href="https://wa.me/6281242922597?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
+            href="https://wa.me/6285216591210?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-rab-navy md:hidden lg:flex gap-2 items-center text-white hoverbrightness-125 py-2 px-6 rounded-xl ml-4"

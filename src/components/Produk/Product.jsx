@@ -61,7 +61,6 @@ const Product = () => {
             key={index}
             className="w-full group"
           >
-            {/* content */}
             <div className="h-[90%]  group-hover:-translate-y-2 transition-all duration-300 outline-0  outline-[#8db03e] group-hover:outline-1   bg-white rounded-2xl overflow-hidden shadow">
               <img src={item.img} alt="" />
               <div className="px-4 py-6 space-y-4">
@@ -79,7 +78,7 @@ const Product = () => {
           </div>
         ))}
       </div>
-      {/* button */}
+
       <div
         data-aos="fade-up"
         data-aos-delay="200"
@@ -87,7 +86,7 @@ const Product = () => {
       >
         <h1>Butuh Material spesifik lainnya?</h1>
         <a
-          href="https://wa.me/6281242922597?text=hallo%20saya%20ingin%20menanyakan%20mengenai%20dan%20suplier%20barang"
+          href="https://wa.me/6285216591210?text=hallo%20saya%20ingin%20menanyakan%20mengenai%20dan%20suplier%20barang"
           target="_blank"
           rel="noopener noreferrer"
           className="border-2 py-2 px-6 border-[#1d4e89] text-[#1d4e89] shadow-2xl shadow-[#cdcdcd] hover:brightness-150 transition-all duration-500 cursor-pointer rounded-2xl"

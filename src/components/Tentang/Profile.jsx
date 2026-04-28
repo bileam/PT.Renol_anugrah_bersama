@@ -1,4 +1,4 @@
-import gambar from "../../assets/image/home.jpg";
+import gambar from "../../assets/image/about.jpeg";
 const Profile = () => {
   return (
     <div className="flex  overflow-hidden md:flex-row flex-col md:gap-10 gap-2 w-full md:items-center ">
@@ -9,7 +9,7 @@ const Profile = () => {
         <img
           src={gambar}
           alt="gambar bangunanan"
-          className="w-full rounded-2xl "
+          className="w-full md:h-100 object-cover rounded-2xl  "
         />
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
