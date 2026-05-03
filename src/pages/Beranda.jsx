@@ -5,12 +5,14 @@ import Porto from "../components/Beranda/Porto";
 
 const Beranda = () => {
   return (
-    <div className="xl:container mx-auto px-2 md:px-5 flex flex-col gap-16">
+    <section className="space-y-16">
       <BannerCarousel />
-      <Layanan />
-      <MitraKami />
-      <Porto />
-    </div>
+      <div className="xl:container mx-auto px-2 md:px-5 flex flex-col gap-16">
+        <Layanan />
+        <MitraKami />
+        <Porto />
+      </div>
+    </section>
   );
 };
 

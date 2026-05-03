@@ -7,6 +7,14 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // 🔥 SCROLL KE ATAS
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   // Efek untuk mendeteksi scroll
   useEffect(() => {
     const handleScroll = () => {
@@ -26,13 +34,12 @@ const Navbar = () => {
     { name: "Tentang Kami", path: "/Tentang" },
     { name: "Produk", path: "/produk" },
     { name: "Portofolio", path: "/portofolio" },
-    // { name: "Hubungi Kami", path: "/kontak" },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? " backdrop-blur-2xl shadow-sm py-2" : "bg-transparent py-4"
+        isScrolled ? " backdrop-blur-2xl shadow-sm py-2" : "py-4"
       }`}
     >
       <div className="xl:container mx-auto px-2 md:px-5 flex justify-between items-center">
@@ -54,17 +61,19 @@ const Navbar = () => {
             </p>
           </div>
         </Link>
+
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
           {menu.map((item, index) => (
             <div key={index} className="group flex flex-col relative">
               <NavLink
                 to={item.path}
+                onClick={handleScrollTop} // 🔥 tambahkan ini
                 className={({ isActive }) =>
                   `pb-1 transition-all duration-300 ${
                     isActive
                       ? "font-bold text-rab-navy"
-                      : "text-slate-600 hover:text-rab-navy"
+                      : "text-rab-navy font-semibold hover:text-rab-navy"
                   }`
                 }
               >
@@ -133,7 +142,10 @@ const Navbar = () => {
             <NavLink
               key={index}
               to={item.path}
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                handleScrollTop(); // 🔥 tambahkan ini
+              }}
               className={({ isActive }) =>
                 `text-lg font-semibold ${
                   isActive ? "text-rab-green" : "text-slate-600"

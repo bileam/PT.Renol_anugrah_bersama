@@ -33,7 +33,7 @@ const BannerCarousel = () => {
     AOS.refresh();
   }, []);
   return (
-    <div className="w-full h-125 md:min-h-screen overflow-hidden mt-5 rounded-3xl md:rounded-4xl shadow-2xl">
+    <div className="h-screen overflow-hidden  shadow-2xl">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectFade]}
         effect="fade"
@@ -51,8 +51,8 @@ const BannerCarousel = () => {
               className="relative w-full h-full bg-cover bg-center"
               style={{ backgroundImage: `url(${slide.img})` }}
             >
-              <div className="absolute inset-0 bg-black/60  backdrop-blur-[0.5px]" />
-
+              <div className="absolute inset-0 bg-linear-to-r from-[#0a0f1a]/80 via-[#0a0f1a]/50 to-[#0a0f1a]/80"></div>
+              <div className="absolute inset-0 bg-linear-to-b from-transparent to-[#0a0f1a]/90"></div>
               <div className="relative h-full flex flex-col items-stars justify-center text-stars px-6 max-w-4xl mx-auto">
                 <h2
                   className="text-white text-3xl md:text-6xl font-extrabold mb-4 uppercase tracking-tighter

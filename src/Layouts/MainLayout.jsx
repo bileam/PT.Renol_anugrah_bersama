@@ -13,7 +13,7 @@ const MainLayout = () => {
       <header className=" bg-white shadow z-50">
         <Navbar />
       </header>
-      <main className="px-2 md:px-10 md:pt-24 pt-20">
+      <main className="">
         <Outlet />
       </main>
       <div className="relative">

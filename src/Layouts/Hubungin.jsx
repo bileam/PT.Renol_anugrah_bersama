@@ -4,19 +4,13 @@ const Hubungin = () => {
   return (
     <div
       style={{ backgroundImage: `url(${gambar})` }}
-      className="relative w-full h-100 md:h-112.5 overflow-hidden object-cover object-center bg-fixed"
+      className="relative w-full h-100 md:h-[60vh] overflow-hidden object-cover object-center bg-fixed"
     >
-      {/* Background Image */}
-      {/* <img
-        src={gambar}
-        alt="background"
-        className="absolute inset-0 w-full h-full object-cover"
-      /> */}
+ 
+      <div className="absolute inset-0 bg-linear-to-r from-[#0a0f1a]/80 via-[#0a0f1a]/50 to-[#0a0f1a]/80"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent to-[#0a0f1a]/90"></div>
 
-      {/* Overlay Gelap */}
-      <div className="absolute inset-0 bg-black/70"></div>
 
-      {/* Content */}
       <div className="relative z-10 h-full flex items-center">
         <div className="container mx-auto px-6 md:px-12 text-white">
           <div className="max-w-2xl space-y-4">

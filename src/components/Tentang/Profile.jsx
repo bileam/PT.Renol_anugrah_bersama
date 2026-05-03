@@ -1,7 +1,7 @@
 import gambar from "../../assets/image/about.jpeg";
 const Profile = () => {
   return (
-    <div className="flex  overflow-hidden md:flex-row flex-col md:gap-10 gap-2 w-full md:items-center ">
+    <section className="flex h-screen overflow-hidden md:flex-row flex-col md:gap-10 gap-2 w-full md:items-center ">
       <div
         data-aos="fade-right"
         className="relative flex-1 rounded-2xl overflow-hidden"
@@ -50,7 +50,7 @@ const Profile = () => {
           harapan setiap klien.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 export default Profile;
