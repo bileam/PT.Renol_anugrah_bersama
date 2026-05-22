@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 const ModalProject = ({ isOpen, onClose, data }) => {
   const [selectImg, setSelectImg] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false); // 🔥 tambahan
 
   useEffect(() => {
     setSelectImg(0);
@@ -14,13 +15,23 @@ const ModalProject = ({ isOpen, onClose, data }) => {
   if (!isOpen || !data) return null;
 
   const image = data.img || [];
+
   const nextImg = () => {
-    setSelectImg((prev) => (prev + 1) % image.length);
-    setIsZoomed(false);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setSelectImg((prev) => (prev + 1) % image.length);
+      setIsZoomed(false);
+      setIsTransitioning(false);
+    }, 200);
   };
+
   const prevImg = () => {
-    setSelectImg((prev) => (prev === 0 ? image.length - 1 : prev - 1));
-    setIsZoomed(false);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setSelectImg((prev) => (prev === 0 ? image.length - 1 : prev - 1));
+      setIsZoomed(false);
+      setIsTransitioning(false);
+    }, 200);
   };
 
   return (
@@ -34,6 +45,7 @@ const ModalProject = ({ isOpen, onClose, data }) => {
           isOpen ? "modal-open" : "modal-close"
         } md:h-[90vh] md:max-w-6xl rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-2xl`}
       >
+        {/* Thumbnail Desktop */}
         <div className="hidden md:flex mt-15 flex-col gap-3 p-4 w-24 overflow-y-auto">
           {image.map((item, index) => (
             <div
@@ -59,7 +71,10 @@ const ModalProject = ({ isOpen, onClose, data }) => {
             </div>
           ))}
         </div>
+
+        {/* Content */}
         <div className="flex-1 flex flex-col">
+          {/* Header */}
           <div className="flex justify-between items-center px-4 py-3">
             <p className="text-sm text-gray-500">
               {String(selectImg + 1).padStart(2, "0")} /{" "}
@@ -73,24 +88,36 @@ const ModalProject = ({ isOpen, onClose, data }) => {
             </button>
           </div>
 
+          {/*
+           Body */}
           <div className="overflow-y-auto flex-1 p-3 md:p-4 max-h-[calc(100vh-80px)] md:max-h-full">
+            {/* Image */}
             <div className="relative rounded-xl overflow-hidden bg-black">
               <img
                 src={image[selectImg]}
                 alt=""
                 onClick={() => setIsZoomed(!isZoomed)}
                 className={`
-                  w-full aspect-video object-cover h-120 md:h-200 transition-all duration-300
+                  w-full aspect-video object-cover h-120 md:h-200
+                  transition-all duration-500 ease-in-out
                   ${
                     isZoomed
                       ? "scale-150 cursor-zoom-out"
                       : "scale-100 cursor-zoom-in"
                   }
+                  ${
+                    isTransitioning
+                      ? "opacity-0 scale-105"
+                      : "opacity-100 scale-100"
+                  }
                 `}
               />
 
-              <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-linear-to-r from-[#0a0f1a]/80 via-[#0a0f1a]/50 to-[#0a0f1a]/80"></div>
+              <div className="absolute inset-0 bg-linear-to-b from-transparent to-[#0a0f1a]/90"></div>
 
+              {/* Navigation */}
               <button
                 onClick={nextImg}
                 className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow"
@@ -105,6 +132,8 @@ const ModalProject = ({ isOpen, onClose, data }) => {
                 ←
               </button>
             </div>
+
+            {/* Thumbnail Mobile */}
             <div className="flex md:hidden gap-3 mt-3 overflow-x-auto">
               {image.map((item, index) => (
                 <img
@@ -119,6 +148,8 @@ const ModalProject = ({ isOpen, onClose, data }) => {
                 />
               ))}
             </div>
+
+            {/* Info */}
             <div className="flex flex-col md:flex-row gap-4 md:gap-6 mt-6">
               <div className="w-full md:w-1/2 flex flex-col gap-3">
                 <h1 className="text-rab-navy text-xs md:text-sm uppercase tracking-wide">
@@ -131,8 +162,10 @@ const ModalProject = ({ isOpen, onClose, data }) => {
                   {data.desc}
                 </p>
               </div>
+
               <div className="w-full md:w-1/2 bg-gray-50 rounded-xl p-4 flex flex-col gap-3">
                 <h1 className="text-rab-navy font-semibold">Detail Proyek</h1>
+
                 <div className="flex justify-between text-sm">
                   <div className="flex items-center gap-2 text-gray-600">
                     <Calendar size={16} />
@@ -140,6 +173,7 @@ const ModalProject = ({ isOpen, onClose, data }) => {
                   </div>
                   <span>{data.tahun}</span>
                 </div>
+
                 <div className="flex justify-between text-sm">
                   <div className="flex items-center gap-2 text-gray-600">
                     <Tag size={16} />
@@ -147,6 +181,7 @@ const ModalProject = ({ isOpen, onClose, data }) => {
                   </div>
                   <span>{data.kategori}</span>
                 </div>
+
                 <div className="flex justify-between text-sm">
                   <div className="flex items-center gap-2 text-gray-600">
                     <MapPin size={16} />
@@ -154,6 +189,7 @@ const ModalProject = ({ isOpen, onClose, data }) => {
                   </div>
                   <span>{data.lokasi}</span>
                 </div>
+
                 <div className="mt-3">
                   <a
                     href="https://wa.me/6285216591210?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
