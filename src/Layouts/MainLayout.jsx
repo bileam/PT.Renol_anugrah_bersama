@@ -34,7 +34,7 @@ const MainLayout = () => {
         </div> */}
         {/* end */}
         <a
-          href="https://wa.me/6285216591210?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
+          href="https://wa.me/6282320960810?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20Material"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-rab-navy lg:hidden z-20 fixed bottom-10 hover:scale-110 transition-all  shadow-2xl right-6 group gap-2 items-center text-white hoverbrightness-125 py-4 px-4 rounded-full ml-4"

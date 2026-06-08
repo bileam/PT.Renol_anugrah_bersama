@@ -18,12 +18,12 @@ const Layanan = () => {
   const layanan = [
     {
       judul: "Konstruksi Bangunan aplikator",
-      desk: "Mengerjakan berbagai proyek konstruksi, mulai dari hunian, komersial, hingga infrastruktur, concrite repair, waterproofing, epoxy flooring, floorhardener dan perkuatan struktur dengan standar kualitas dan keselamatan.",
+      desk: "Mengerjakan berbagai proyek konstruksi, mulai dari hunian, komersial, hingga infrastruktur, concrite repair, waterproofing, epoxy flooring, floorhardener dan perkuatan struktur.",
       img: logoKonstruksi,
     },
     {
       judul: "Suplier Material",
-      desk: "menyediakan material bangunan berkualitas dari pemasok terpercaya dengan harga kompetitif dan pengiriman cepat",
+      desk: "menyediakan material bangunan dan bahan cemical konstruksi",
       img: supliermaterial,
     },
     {
@@ -48,16 +48,23 @@ const Layanan = () => {
   });
 
   return (
-    <div className="flex flex-col gap-6  justify-center items-center ">
+    <div className="flex flex-col gap-6  justify-center items-center md:mb-10 ">
       <h2 data-aos="fade-up" className="text-center text-rab-green font-bold">
         Layanan Utama
       </h2>
-      <h1
-        data-aos="fade-up"
-        className="text-center text-rab-navy font-bold md:text-3xl text-2xl"
-      >
-        Apa Yang Kami Lakukan?
-      </h1>
+      <div className="flex -mt-2 flex-col  justify-center items-center gap-4">
+        <h1
+          data-aos="fade-up"
+          className="text-center text-rab-navy font-bold md:text-3xl text-2xl"
+        >
+          Apa Yang Kami Lakukan?
+        </h1>
+
+        <div
+          data-aos="fade-up"
+          className="inline-block  w-20 border-2 border-[#1d4e89]"
+        ></div>
+      </div>
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {layanan.map((item, index) => (
           <div
@@ -66,10 +73,15 @@ const Layanan = () => {
             key={index}
           >
             <div
-              className="px-6 py-6 w-full h-full bg-white group gap-4 
-                 hover:-translate-y-2 hover:scale-105 hover:shadow-xl 
+              className={`px-6 py-6 w-full  h-full   group gap-4 
+                 ${
+                   index == 0 || index == 2
+                     ? " lg:border translate-y-5  lg:border-[#8db03e]  "
+                     : "bg-[#0f172a] text-white lg:-translate-y-2 translate-y-0"
+                 }
+                     hover:shadow-xl 
                  transition-all duration-500 ease-in-out 
-                 rounded-2xl flex flex-col items-center text-center"
+                 rounded-2xl flex flex-col items-center text-center`}
             >
               <img
                 src={item.img}
@@ -78,7 +90,13 @@ const Layanan = () => {
                    group-hover:shadow-2xl shadow-[#8db03e] 
                    transition-all duration-500 object-cover bg-rab-light"
               />
-              <h2 className="font-bold text-lg">{item.judul}</h2>
+              <h2
+                className={`font-bold ${
+                  index == 1 || index == 3 ? "text-rab-green" : ""
+                } text-lg `}
+              >
+                {item.judul}
+              </h2>
               <p className="text-sm">{item.desk}</p>
             </div>
           </div>

@@ -23,6 +23,12 @@ import DesainRumah1lantai_01 from "../assets/Pengerjaan/Desain/Rumah1Lantai/Desa
 import DesainRumah1lantai_02 from "../assets/Pengerjaan/Desain/Rumah1Lantai/Desain-Rumah-1-Lantai-Modern-02.jpg";
 import DesainRumah1lantai_03 from "../assets/Pengerjaan/Desain/Rumah1Lantai/Desain-Rumah-1-Lantai-Modern-03.jpg";
 import DesainRumah1lantai_04 from "../assets/Pengerjaan/Desain/Rumah1Lantai/Desain-Rumah-1-Lantai-Modern-04.jpg";
+
+// concrite repair
+import RAB_Concrite_repair_01 from "../assets/Pengerjaan/Product/concrite_repeir/RAB_Concrite_repair_01.png";
+import RAB_Concrite_repair_02 from "../assets/Pengerjaan/Product/concrite_repeir/RAB_Concrite_repair_02.png";
+import RAB_Concrite_repair_03 from "../assets/Pengerjaan/Product/concrite_repeir/RAB_Concrite_repair_03.png";
+
 export const project = [
   {
     id: 1,
@@ -55,9 +61,10 @@ export const project = [
     tahun: "-",
     lokasi: "-",
     img: [
-      PengamplikasianProdukepoxiFloring_01,
-      PengamplikasianProdukepoxiFloring_02,
       PengamplikasianProdukepoxiFloring_03,
+
+      PengamplikasianProdukepoxiFloring_02,
+
       PengamplikasianProdukepoxiFloring_04,
     ],
     desc: "Kami menghadirkan solusi epoxy flooring berkualitas untuk menciptakan lantai yang kuat, tahan lama, dan estetis. Dengan proses pengerjaan yang detail dan material terbaik, hasil akhir memberikan perlindungan maksimal serta tampilan modern yang meningkatkan nilai bangunan.",
@@ -88,5 +95,18 @@ export const project = [
       DesainRumah1lantai_01,
     ],
     desc: "FRP pada proyek ini memberikan perkuatan struktur yang cepat dan efisien tanpa pembongkaran besar, meningkatkan kekuatan balok, pelat, dan kolom secara signifikan. Material ini ringan, tahan korosi, aman, dan membantu memperpanjang umur layanan bangunan.",
+  },
+  {
+    id: 6,
+    kategori: "Produk",
+    name: "Concrite repair Pelabuhan",
+    tahun: "-",
+    lokasi: "-",
+    img: [
+      RAB_Concrite_repair_01,
+      RAB_Concrite_repair_02,
+      RAB_Concrite_repair_03,
+    ],
+    desc: "Pekerjaan concrete repair pada area pelabuhan dilakukan untuk memperbaiki kerusakan beton akibat paparan air laut, korosi tulangan, dan faktor lingkungan ekstrem. Metode perbaikan meliputi pembersihan area rusak, treatment tulangan, aplikasi mortar perbaikan, serta pelapisan proteksi guna mengembalikan kekuatan struktur dan memperpanjang umur layanan konstruksi.",
   },
 ];

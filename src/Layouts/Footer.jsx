@@ -1,5 +1,10 @@
 import { NavLink } from "react-router-dom";
 import logoRAB from "../assets/Logo/NobgLogo.png";
+import instagram from "../assets/sosialMedia/instagram.png";
+import email from "../assets/sosialMedia/gmail.png";
+import whatsapp from "../assets/sosialMedia/whatsapp.png";
+import { BsInstagram, BsWhatsapp } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   const menu = [
@@ -34,7 +39,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* 🔹 Navigasi */}
         <div>
           <h1 className="font-bold mb-4">Navigasi</h1>
           <div className="flex flex-col gap-2">
@@ -62,13 +66,22 @@ const Footer = () => {
 
           <div className="flex flex-col gap-3 text-gray-300 text-sm">
             <div className="flex items-center gap-2">
-              <span>📧</span>
-              <p className="break-all">renolanugrahbersama@gmail.com</p>
+              {/* <img src={whatsapp} alt="" className="w-6" />
+               */}
+              <BsWhatsapp className="text-rab-green  w-5 h-5" />
+              <p>+62 823-2096-0810</p>
             </div>
 
             <div className="flex items-center gap-2">
-              <span>📱</span>
-              <p>+62 852 1659 1210</p>
+              {/* <img src={instagram} alt="" className="w-6" />
+               */}
+              <BsInstagram className="text-rab-green  w-5 h-5" />
+              <p>renol_anugrah_bersama</p>
+            </div>
+            <div className="flex items-center gap-2">
+              {/* <img src={email} alt="" className="w-5" /> */}
+              <MdEmail className="text-rab-green w-5 h-5" />
+              <p className="break-all">renolanugrahbersama@gmail.com</p>
             </div>
           </div>
         </div>

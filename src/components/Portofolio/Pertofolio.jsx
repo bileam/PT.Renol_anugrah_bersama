@@ -56,7 +56,7 @@ const Portofolio = () => {
                     <FaEye className="text-white text-2xl" />
                   </button>
                   <a
-                    href="https://wa.me/6285216591210?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
+                    href="https://wa.me/6282320960810?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20Material"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="cursor-pointer group hover:bg-green-500  p-4 hover:scale-120  transition-all duration-300 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-xl"

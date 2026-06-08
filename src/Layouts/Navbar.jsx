@@ -34,12 +34,13 @@ const Navbar = () => {
     { name: "Tentang Kami", path: "/Tentang" },
     { name: "Produk", path: "/produk" },
     { name: "Portofolio", path: "/portofolio" },
+    { name: "Kontak", path: "/Kontak" },
   ];
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? " backdrop-blur-2xl shadow-sm py-2" : "py-4"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  ${
+        isScrolled ? " bg-white shadow-sm py-6" : "py-4"
       }`}
     >
       <div className="xl:container mx-auto px-2 md:px-5 flex justify-between items-center">
@@ -68,20 +69,18 @@ const Navbar = () => {
             <div key={index} className="group flex flex-col relative">
               <NavLink
                 to={item.path}
-                onClick={handleScrollTop} // 🔥 tambahkan ini
+                onClick={handleScrollTop}
                 className={({ isActive }) =>
-                  `pb-1 transition-all duration-300 ${
-                    isActive
-                      ? "font-bold text-rab-navy"
-                      : "text-rab-navy font-semibold hover:text-rab-navy"
-                  }`
+                  `pb-1 transition-all duration-500 hover:text-rab-navy 
+              ${isScrolled ? "" : "text-white"}
+                ${isActive ? " text-rab-navy font-bold " : " text-[#2c2b2b]"}`
                 }
               >
                 {({ isActive }) => (
                   <>
                     {item.name}
                     <div
-                      className={`h-0.5 bg-rab-green transition-all duration-300 absolute bottom-0 left-0
+                      className={`h-0.5 bg-[#1d4e89] transition-all duration-300 absolute bottom-0 left-0
                       ${
                         isActive
                           ? "w-full opacity-100"
@@ -95,7 +94,7 @@ const Navbar = () => {
           ))}
 
           <a
-            href="https://wa.me/6285216591210?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
+            href="https://wa.me/6282320960810?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20Material"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-rab-navy md:hidden lg:flex gap-2 items-center text-white hoverbrightness-125 py-2 px-6 rounded-xl ml-4"
@@ -133,7 +132,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`md:hidden absolute w-full bg-white shadow-xl transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute w-full bg-black shadow-xl transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -147,9 +146,7 @@ const Navbar = () => {
                 handleScrollTop(); // 🔥 tambahkan ini
               }}
               className={({ isActive }) =>
-                `text-lg font-semibold ${
-                  isActive ? "text-rab-green" : "text-slate-600"
-                }`
+                `text-lg  ${isActive ? "text-white" : "text-slate-600"}`
               }
             >
               {item.name}

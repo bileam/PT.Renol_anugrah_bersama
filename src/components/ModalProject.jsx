@@ -192,7 +192,7 @@ const ModalProject = ({ isOpen, onClose, data }) => {
 
                 <div className="mt-3">
                   <a
-                    href="https://wa.me/6285216591210?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
+                    href="https://wa.me/6282320960810?text=hallo%20saya%20ingin%20konsultasi%20mengenai%20konstruksi%20dan%20suplier%20barang"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-rab-navy w-full flex justify-center items-center gap-2 py-2 rounded-xl text-white hover:brightness-110 transition"

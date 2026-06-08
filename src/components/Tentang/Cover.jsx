@@ -1,11 +1,11 @@
 import contoh_bg from "../../assets/Pengerjaan/Bangunan/FRP/compres.jpeg";
 
-const Cover = ({ title, desc }) => {
+const Cover = ({ title, desc, image }) => {
   return (
     <section
       className="relative  h-screen  w-full flex items-center justify-center bg-fixed bg-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url(${contoh_bg})`,
+        backgroundImage: `url(${image || contoh_bg})`,
       }}
     >
       {/* overlay */}
