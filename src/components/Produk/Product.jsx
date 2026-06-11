@@ -55,69 +55,78 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4 items-center md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4  items-center md:grid-cols-2 lg:grid-cols-4">
         {/* untuk animasi */}
-        {filteredProduk.map((item, index) => (
-          <div
-            data-aos="fade-up"
-            data-aos-delay="200"
-            key={index}
-            className="w-full group"
-          >
-            <div className="  group-hover:-translate-y-2 transition-all duration-300 outline-0  outline-[#8db03e] group-hover:outline-1   bg-white rounded-2xl overflow-hidden shadow">
-              <div className=" bg-rab-navy h-50 relative ">
-                <span className=" py-1.5 shadow-2xl top-2 left-2 text-sm group-hover:bg-rab-green transition-colors duration-500  z-2 absolute  px-2 bg-black/60  text-center rounded-full backdrop-blur-3xl text-white ">
-                  {item.kategori}
-                </span>
-                <img
-                  src={item.img}
-                  alt={item.nama}
-                  className="object-cover h-50 group-hover:scale-110 transition-all w-full duration-700  mx-auto "
-                />
-              </div>
-              <div className="px-4 py-6 space-y-1">
-                <div className="space-y-1.5">
-                  <h1 className="font-bold text-rab-navy text-xl">
-                    {item.nama}
-                  </h1>
+
+        {filteredProduk.length > 0 ? (
+          filteredProduk.map((item, index) => (
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              key={index}
+              className="w-full group"
+            >
+              <div className="  group-hover:-translate-y-2 transition-all duration-300 outline-0  outline-[#8db03e] group-hover:outline-1   bg-white rounded-2xl overflow-hidden shadow">
+                <div className=" bg-rab-navy h-50 relative ">
+                  <span className=" py-1.5 shadow-2xl top-2 left-2 text-sm group-hover:bg-rab-green transition-colors duration-500  z-2 absolute  px-2 bg-black/60  text-center rounded-full backdrop-blur-3xl text-white ">
+                    {item.kategori}
+                  </span>
+                  <img
+                    src={item.img}
+                    alt={item.nama}
+                    className="object-cover h-50 group-hover:scale-110 transition-all w-full duration-700  mx-auto "
+                  />
                 </div>
-                <p
-                  className="text-sm overflow-hidden text-ellipsis line-clamp-2
-  "
-                >
-                  {item.desc}
-                </p>
-                <div className=" outline w-full outline-green-100 mt-2"></div>
-                <div className="mt-5">
-                  <button
-                    onClick={() => {
-                      setOpen(true);
-                      setSelectData(item);
-                    }}
-                    className="border-2 border-[#1d4e89] text-rab-navy rounded-lg group/button  hover:brightness-120 transition-all cursor-pointer duration-500 py-2 px-8 w-full flex gap-4 items-center"
-                  >
-                    <span className="group-hover/button:text-rab-green transition-all duration-300 text-sm">
-                      {" "}
-                      Detail Produk
-                    </span>
-                    <span
-                      className="
-    transition-colors
-    duration-200
-    group-hover/button:text-rab-green
-  "
-                    >
-                      <FiArrowRight
-                        className="ml-0 group-hover/button:ml-10 transition-[margin] duration-700
+                <div className="px-4 py-6 space-y-1">
+                  <div className="space-y-1.5">
+                    <h1 className="font-bold text-rab-navy text-xl">
+                      {item.nama}
+                    </h1>
+                  </div>
+                  <p
+                    className="text-sm overflow-hidden text-ellipsis line-clamp-2
     "
-                      />
-                    </span>
-                  </button>
+                  >
+                    {item.desc}
+                  </p>
+                  <div className=" outline w-full outline-green-100 mt-2"></div>
+                  <div className="mt-5">
+                    <button
+                      onClick={() => {
+                        setOpen(true);
+                        setSelectData(item);
+                      }}
+                      className="border-2 border-[#1d4e89] text-rab-navy rounded-lg group/button  hover:brightness-120 transition-all cursor-pointer duration-500 py-2 px-8 w-full flex gap-4 items-center"
+                    >
+                      <span className="group-hover/button:text-rab-green transition-all duration-300 text-sm">
+                        {" "}
+                        Detail Produk
+                      </span>
+                      <span
+                        className="
+      transition-colors
+      duration-200
+      group-hover/button:text-rab-green
+    "
+                      >
+                        <FiArrowRight
+                          className="ml-0 group-hover/button:ml-10 transition-[margin] duration-700
+      "
+                        />
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
+          ))
+        ) : (
+          <div className="mx-auto w-100">
+            <h1 className="font-bold">
+              Cari produk berdasarkan kategori dan nama...
+            </h1>
           </div>
-        ))}
+        )}
       </div>
 
       <div

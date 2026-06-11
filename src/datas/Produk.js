@@ -22,6 +22,17 @@ import RAB_grouting_Lokfix_E77 from "../assets/Produk/Grouting/RAB_grouting_Lokf
 import RAB_grouting_Renderoc_HF_Premix from "../assets/Produk/Grouting/RAB_grouting_Renderoc_HF_Premix.png";
 import RAB_grouting_Renderoc_SM from "../assets/Produk/Grouting/RAB_grouting_Renderoc_SM.png";
 
+// perkuatan struktur
+import RAB_perkuatan_struktur_Nitowrap_CWS_450 from "../assets/Produk/Perkuatan_Struktur/RAB_perkuatan_struktur_Nitowrap_CWS_450.png";
+import RAB_perkuatan_struktur_Nitowrap_CWS300_Nitowrap_Primer_Nitowrap_Encap_Resin from "../assets/Produk/Perkuatan_Struktur/RAB_perkuatan_struktur_Nitowrap_CWS300_Nitowrap_Primer_Nitowrap_Encap_Resin.png";
+import RAB_perkuatan_struktur_Nitowrap_CWS300_System from "../assets/Produk/Perkuatan_Struktur/RAB_perkuatan_struktur_Nitowrap_CWS300_System.png";
+
+// Lainnya
+import RAB_Random_Besi from "../assets/Produk/Lainnya/RAB_Random_Besi.png";
+import RAB_Random_Canal_C from "../assets/Produk/Lainnya/RAB_Random_Canal_C.png";
+import RAB_Random_Hollow from "../assets/Produk/Lainnya/RAB_Random_Hollow.png";
+import RAB_Random_Kalsiboard from "../assets/Produk/Lainnya/RAB_Random_Kalsiboard.png";
+import RAB_Random_Pipa_PVC from "../assets/Produk/Lainnya/RAB_Random_Pipa_PVC.png";
 export const produk = [
   {
     id: 1,
@@ -156,5 +167,65 @@ export const produk = [
     nama: "grouting Renderoc SM",
     desc: "-",
     img: RAB_grouting_Renderoc_SM,
+  },
+
+  // perkuatan strukur
+  {
+    id: 20,
+    kategori: "perkuatan struktur",
+    nama: "Nitowrap CWS 450",
+    desc: "-",
+    img: RAB_perkuatan_struktur_Nitowrap_CWS_450,
+  },
+  {
+    id: 21,
+    kategori: "perkuatan struktur",
+    nama: "Nitowrap CWS300 Nitowrap Primer Nitowrap Encap Resin",
+    desc: "-",
+    img: RAB_perkuatan_struktur_Nitowrap_CWS300_Nitowrap_Primer_Nitowrap_Encap_Resin,
+  },
+  {
+    id: 22,
+    kategori: "perkuatan struktur",
+    nama: "Nitowrap CWS300 System",
+    desc: "-",
+    img: RAB_perkuatan_struktur_Nitowrap_CWS300_System,
+  },
+
+  // Lainnya
+  {
+    id: 23,
+    kategori: "besi",
+    nama: "Besi",
+    desc: "-",
+    img: RAB_Random_Besi,
+  },
+  {
+    id: 24,
+    kategori: "Canal C",
+    nama: "Canal C",
+    desc: "-",
+    img: RAB_Random_Canal_C,
+  },
+  {
+    id: 25,
+    kategori: "Hollow",
+    nama: "Hollow",
+    desc: "-",
+    img: RAB_Random_Hollow,
+  },
+  {
+    id: 26,
+    kategori: "Kalsiboard",
+    nama: "Kalsiboard",
+    desc: "-",
+    img: RAB_Random_Kalsiboard,
+  },
+  {
+    id: 27,
+    kategori: "Pipa PVC",
+    nama: "Pipa PVC",
+    desc: "-",
+    img: RAB_Random_Pipa_PVC,
   },
 ];
