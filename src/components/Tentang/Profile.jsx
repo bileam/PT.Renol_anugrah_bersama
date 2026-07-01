@@ -15,17 +15,17 @@ const Profile = () => {
       </div>
 
       <div className="md:w-[40%]">
-        <h1 data-aos="fade-left" className="font-bold text-rab-green">
+        <h2 data-aos="fade-left" className="font-bold text-rab-green">
           Profile Perusahaan
-        </h1>
-        <h2
+        </h2>
+        <h3
           data-aos-delay="400"
           data-aos="fade-left"
           className="font-extrabold text-3xl "
         >
           PT. RENOL ANUGRAH
           <span className="block text-rab-green ">BERSAMA</span>
-        </h2>
+        </h3>
         <p
           data-aos="fade-left"
           data-aos-delay="600"

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import contohgambar from "../../assets/image/home.jpg";
 import { project } from "../../datas/project";
 import { FaEye } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -12,16 +11,16 @@ const Portofolio = () => {
   return (
     <div className="mt-4 flex flex-col gap-12 pb-12">
       <div className="flex flex-col  items-center gap-6">
-        <h1 data-aos="fade-up" className="font-bold text-rab-green text-lg">
+        <h3 data-aos="fade-up" className="font-bold text-rab-green text-lg">
           SHOW CASE
-        </h1>
-        <h1
+        </h3>
+        <h2
           data-aos="fade-up"
           data-aos-delay="200"
           className="font-bold text-rab-navy text-4xl text-center"
         >
           Portofolio proyek kami
-        </h1>
+        </h2>
       </div>
       <div className="grid grid-cols-1 gap-4 items-center md:grid-cols-2 lg:grid-cols-3">
         {[...project]
@@ -72,8 +71,8 @@ const Portofolio = () => {
                     isOpen === index ? "bottom-6" : "-bottom-full"
                   } -bottom-full transition-all duration-500 left-6 text-white`}
                 >
-                  <h1 className="text-xl">{item.kategori}</h1>
-                  <h2 className="text-2xl font-bold ">{item.name}</h2>
+                  <p className="text-xl">{item.kategori}</p>
+                  <p className="text-2xl font-bold ">{item.name}</p>
                 </div>
               </div>
             </div>

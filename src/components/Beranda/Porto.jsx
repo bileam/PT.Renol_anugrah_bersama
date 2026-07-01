@@ -1,6 +1,3 @@
-import gambar from "../../assets/image/home.jpg";
-import gambar2 from "../../assets/image/contoh.jpeg";
-import gambar3 from "../../assets/image/cott.jpeg";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";

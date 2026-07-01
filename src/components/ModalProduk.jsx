@@ -1,6 +1,4 @@
-import { List, ListCheck } from "lucide-react";
 import { BsWhatsapp } from "react-icons/bs";
-
 const ModalProduk = ({ isOpen, onClose, data }) => {
   if (!isOpen || !data) return null;
 
@@ -32,8 +30,6 @@ const ModalProduk = ({ isOpen, onClose, data }) => {
       duration-700
     "
           />
-
-          {/* Overlay Gelap */}
           <div
             className="
       absolute 
@@ -41,8 +37,6 @@ const ModalProduk = ({ isOpen, onClose, data }) => {
       bg-black/50
     "
           />
-
-          {/* Gradient Bawah */}
           <div
             className="
       absolute 
@@ -67,21 +61,21 @@ const ModalProduk = ({ isOpen, onClose, data }) => {
         </div>
         <div className="flex-1 p-4 bg-[#012552] space-y-4 relative">
           <div>
-            <h1 className="text-sm text-gray-400">nama produk</h1>
+            <p className="text-sm text-gray-400">nama produk</p>
             <div className="flex gap-2 items-center">
               <div className="w-2 h-2 rounded-full bg-rab-green "></div>
               <p className="text-[#f1f5f9]">{data.nama}</p>
             </div>
           </div>
           <div>
-            <h1 className="text-sm text-gray-400">Janis</h1>
+            <p className="text-sm text-gray-400">Janis</p>
             <div className="flex gap-2 items-center">
               <div className="w-2 h-2 rounded-full bg-rab-green "></div>
               <p className="text-[#f1f5f9]">{data.kategori}</p>
             </div>
           </div>
           <div>
-            <h1 className="text-sm text-gray-400">deskripsi</h1>
+            <p className="text-sm text-gray-400">deskripsi</p>
             <div className="flex gap-2 items-center">
               <div className="w-2 h-2 rounded-full bg-rab-green "></div>
               <p className="text-[#f1f5f9] text-sm">{data.desc}</p>

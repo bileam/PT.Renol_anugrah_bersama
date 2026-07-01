@@ -1,4 +1,4 @@
-import { Clock, Form, MapPin, Timeline } from "lucide-react";
+import { Clock, Form, MapPin } from "lucide-react";
 import FormKontak from "./FormKontak";
 import Kontak from "./kontak";
 import { MdEmail, MdWifiCalling } from "react-icons/md";
@@ -11,9 +11,9 @@ const Formulir = () => {
         <div className="flex gap-2 ">
           <Form className="text-rab-navy w-8 h-8" />
           <div>
-            <h1 className="text-rab-navy text-md font-semibold">
+            <p className="text-rab-navy text-md font-semibold">
               Formulir Konsultasi Proyek
-            </h1>
+            </p>
             <p className="text-sm text-[#a09b9b]">
               Isi formulir berikut untuk mendapatkan konsultasi terkait
               kebutuhan proyek konstruksi, renovasi, waterproofing maupun
@@ -24,7 +24,7 @@ const Formulir = () => {
         <FormKontak />
       </div>
       <div className="md:w-100 bg-white rounded-2xl shadow-2xl p-6 ">
-        <h1 className="text-rab-navy font-semibold">Informasi Perusahaan</h1>
+        <p className="text-rab-navy font-semibold">Informasi Perusahaan</p>
         <div className="outline w-20 outline-[#8db03e] mt-2"></div>
         <div className="flex flex-col gap-2 md:mt-15">
           <Kontak

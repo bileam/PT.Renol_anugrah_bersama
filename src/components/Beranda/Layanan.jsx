@@ -1,7 +1,6 @@
 import logoKonstruksi from "../../assets/Logo/Kontruksi.jpg";
 import supliermaterial from "../../assets/Logo/material.png";
 import Kemitraan from "../../assets/Logo/kemitraan.jpg";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
@@ -53,12 +52,12 @@ const Layanan = () => {
         Layanan Utama
       </h2>
       <div className="flex -mt-2 flex-col  justify-center items-center gap-4">
-        <h1
+        <h3
           data-aos="fade-up"
           className="text-center text-rab-navy font-bold md:text-3xl text-2xl"
         >
           Apa Yang Kami Lakukan?
-        </h1>
+        </h3>
 
         <div
           data-aos="fade-up"
@@ -90,13 +89,13 @@ const Layanan = () => {
                    group-hover:shadow-2xl shadow-[#8db03e] 
                    transition-all duration-500 object-cover bg-rab-light"
               />
-              <h2
+              <h4
                 className={`font-bold ${
                   index == 1 || index == 3 ? "text-rab-green" : ""
                 } text-lg `}
               >
                 {item.judul}
-              </h2>
+              </h4>
               <p className="text-sm">{item.desk}</p>
             </div>
           </div>

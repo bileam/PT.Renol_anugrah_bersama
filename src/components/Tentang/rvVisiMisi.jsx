@@ -1,4 +1,4 @@
-import bgimg from "../../assets/image/gem.jpeg";
+
 import bg_parallex from "../../assets/image/contoh.jpeg";
 const VisiMisi2 = () => {
   const misi = [
@@ -25,9 +25,9 @@ const VisiMisi2 = () => {
       <div className="absolute inset-0 bg-linear-to-r from-[#0a0f1a]/80 via-[#0a0f1a]/50 to-[#0a0f1a]/80"></div>
       <div className="absolute inset-0 bg-linear-to-b from-transparent to-[#0a0f1a]/90"></div>
       <div className="flex-1 relative z-10">
-        <h1 data-aos="fade-up" className="text-rab-green font-bold text-lg">
+        <h2 data-aos="fade-up" className="text-rab-green font-bold text-lg">
           Visi Kami
-        </h1>
+        </h2>
         <p
           data-aos="fade-up"
           data-aos-delay="200"
@@ -40,9 +40,9 @@ const VisiMisi2 = () => {
         </p>
       </div>
       <div className="md:w-[50%]  relative z-10">
-        <h1 data-aos="fade-up" className="text-rab-green font-bold text-lg">
+        <h2 data-aos="fade-up" className="text-rab-green font-bold text-lg">
           Misi kami
-        </h1>
+        </h2>
         <ul className="text-white text-md space-y-3 md:mt-4 mt-2">
           {misi.map((item, index) => (
             <div key={index} className="flex gap-2 ">

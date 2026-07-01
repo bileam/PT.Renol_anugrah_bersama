@@ -7,7 +7,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // 🔥 SCROLL KE ATAS
   const handleScrollTop = () => {
     window.scrollTo({
       top: 0,
@@ -15,7 +14,6 @@ const Navbar = () => {
     });
   };
 
-  // Efek untuk mendeteksi scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -44,7 +42,6 @@ const Navbar = () => {
       }`}
     >
       <div className="xl:container mx-auto px-2 md:px-5 flex justify-between items-center">
-        {/* Logo Section */}
         <Link to="/" className="flex gap-2 items-center">
           <img
             src={logoRAB}
@@ -63,7 +60,6 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
           {menu.map((item, index) => (
             <div key={index} className="group flex flex-col relative">
@@ -104,7 +100,6 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Toggle Button */}
         <button
           className="md:hidden text-rab-navy p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -130,9 +125,8 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       <div
-        className={`md:hidden absolute w-full bg-black shadow-xl transition-all duration-300 overflow-hidden ${
+        className={`md:hidden absolute w-full bg-white shadow-xl transition-all duration-300 overflow-hidden ${
           isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -143,10 +137,10 @@ const Navbar = () => {
               to={item.path}
               onClick={() => {
                 setIsMobileMenuOpen(false);
-                handleScrollTop(); // 🔥 tambahkan ini
+                handleScrollTop();
               }}
               className={({ isActive }) =>
-                `text-lg  ${isActive ? "text-white" : "text-slate-600"}`
+                `text-lg  ${isActive ? "text-black font-bold" : "text-black"}`
               }
             >
               {item.name}

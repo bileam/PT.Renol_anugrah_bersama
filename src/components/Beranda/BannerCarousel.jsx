@@ -8,7 +8,6 @@ import "./style.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import corrosel from "../../assets/image/BangunRumah-2-setengah-Lantai.jpeg";
 import corrosel2 from "../../assets/image/pengerjaan-menggunakan-Produk.jpeg";
 import Banner_01 from "../../assets/Banner/Banner_RAB_01.png";
 import Banner_02 from "../../assets/Banner/Banner_RAB_02.png";
@@ -68,13 +67,13 @@ const BannerCarousel = () => {
               <div className="absolute inset-0 bg-linear-to-r from-[#0a0f1a]/50 via-[#0a0f1a]/50 to-[#0a0f1a]/50"></div>
               <div className="absolute inset-0 bg-linear-to-b from-transparent to-[#0a0f1a]/20"></div>
               <div className="relative h-full flex flex-col items-stars justify-center text-stars px-6 max-w-4xl mx-auto">
-                <h2
+                <h1
                   className="text-white text-3xl md:text-6xl font-extrabold mb-4 uppercase tracking-tighter
                                transition-all duration-1000 ease-out translate-y-12 opacity-0
                                in-[.swiper-slide-active_&]:translate-y-0 in-[.swiper-slide-active_&]:opacity-100"
                 >
                   {slide.title.toLowerCase()}
-                </h2>
+                </h1>
 
                 <p
                   className="text-slate-200 text-base md:text-xl mb-8 leading-relaxed

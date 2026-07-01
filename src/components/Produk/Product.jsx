@@ -1,10 +1,4 @@
-import { RiGhost2Fill } from "react-icons/ri";
-import contohgambar from "../../assets/image/home.jpg";
-// import waterprooping_RenolAnugrahBersama from "../../assets/Produk/Produk+RAB+Waterprooping.png";
-// import concreteRepair from "../../assets/Produk/Produk+RAB+ConcreteRepair.png";
-import brus from "../../assets/Produk/waterprooping/Brushbond+Flex.png";
-import { Search, Sliders, SlidersVertical } from "lucide-react";
-import { GiTopPaw } from "react-icons/gi";
+import { Search } from "lucide-react";
 import { FiArrowRight } from "react-icons/fi";
 import { produk } from "../../datas/Produk";
 import { useState } from "react";
@@ -21,16 +15,16 @@ const Product = () => {
   return (
     <div className="mt-22 flex flex-col gap-12 pb-12">
       <div className="flex flex-col  items-stars ">
-        <h1 data-aos="fade-up" className="font-bold text-rab-green text-lg">
+        <h2 data-aos="fade-up" className="font-bold text-rab-green text-lg">
           KATALOK SUPLAI
-        </h1>
-        <h1
+        </h2>
+        <h3
           data-aos="fade-up"
           data-aos-delay="200"
           className="font-bold text-rab-navy text-4xl text-stars -mt-1"
         >
           Material Bangunan Unggulan
-        </h1>
+        </h3>
         <div
           data-aos="fade-up"
           data-aos-delay="200"
@@ -55,7 +49,7 @@ const Product = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 gap-4  items-center md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4  items-center md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {/* untuk animasi */}
 
         {filteredProduk.length > 0 ? (
@@ -79,9 +73,9 @@ const Product = () => {
                 </div>
                 <div className="px-4 py-6 space-y-1">
                   <div className="space-y-1.5">
-                    <h1 className="font-bold text-rab-navy text-xl">
+                    <p className="font-bold text-rab-navy text-xl">
                       {item.nama}
-                    </h1>
+                    </p>
                   </div>
                   <p
                     className="text-sm overflow-hidden text-ellipsis line-clamp-2
@@ -122,9 +116,9 @@ const Product = () => {
           ))
         ) : (
           <div className="mx-auto w-100">
-            <h1 className="font-bold">
+            <p className="font-bold">
               Cari produk berdasarkan kategori dan nama...
-            </h1>
+            </p>
           </div>
         )}
       </div>
@@ -134,7 +128,7 @@ const Product = () => {
         data-aos-delay="200"
         className="flex flex-col gap-6 items-center "
       >
-        <h1>Butuh Material spesifik lainnya?</h1>
+        <p>Butuh Material spesifik lainnya?</p>
         <a
           href="https://wa.me/6282320960810?text=hallo%20saya%20ingin%20menanyakan%20mengenai%20dan%20Material"
           target="_blank"

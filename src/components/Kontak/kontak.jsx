@@ -1,5 +1,3 @@
-import { Locate, MapPin } from "lucide-react";
-
 const Kontak = ({ icon, judul, konten }) => {
   return (
     <div className="flex gap-2 mt-6 items-center">

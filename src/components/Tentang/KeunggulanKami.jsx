@@ -27,9 +27,9 @@ const KeunggulanKami = () => {
   ];
   return (
     <div className="w-full flex flex-col items-center gap-5 overflow-hidden pb-5">
-      <h1 data-aos="fade-up" className="text-rab-green font-bold text-lg ">
+      <h2 data-aos="fade-up" className="text-rab-green font-bold text-lg ">
         keunggulan kami
-      </h1>
+      </h2>
       <h2 data-aos="fade-up" className="text-rab-navy font-bold text-3xl">
         Mengapa Memili kami?
       </h2>
@@ -42,9 +42,9 @@ const KeunggulanKami = () => {
                 alt={item.img}
                 className="w-15 h-15 rounded-full p-2 bg-rab-navy"
               />
-              <h1 className="text-rab-navy font-bold text-center">
+              <h3 className="text-rab-navy font-bold text-center">
                 {item.tema}
-              </h1>
+              </h3>
               <p className="text-sm">{item.desc}</p>
             </div>
           </div>

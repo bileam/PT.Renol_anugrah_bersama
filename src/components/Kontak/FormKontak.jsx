@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { LocateIcon, Phone, WorkflowIcon } from "lucide-react";
-
 import { BsWhatsapp } from "react-icons/bs";
 import { CgNametag } from "react-icons/cg";
 import { TbMeterSquare } from "react-icons/tb";
@@ -16,7 +15,6 @@ const FormKontak = () => {
     deskripsi: "",
   });
 
-  // handle input
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -24,7 +22,6 @@ const FormKontak = () => {
     });
   };
 
-  // pesan whatsapp
   const message = `
 Hallo, saya ingin konsultasi mengenai kebutuhan material.
 
@@ -40,17 +37,47 @@ Deskripsi :
 ${form.deskripsi}
   `;
 
-  // link whatsapp
   const whatsappLink = `https://wa.me/6282320960810?text=${encodeURIComponent(
     message
   )}`;
 
+  const handleWhatsapp = (e) => {
+    const requiredFields = [
+      {
+        key: "nama",
+        label: "Nama Lengkap",
+      },
+      {
+        key: "whatsapp",
+        label: "Nomor WhatsApp",
+      },
+      {
+        key: "lokasi",
+        label: "Lokasi Proyek",
+      },
+      {
+        key: "perusahaan",
+        label: "Nama Perusahaan",
+      },
+      {
+        key: "kebutuhan",
+        label: "Kebutuhan",
+      },
+    ];
+
+    const emptyField = requiredFields.find((field) => !form[field.key].trim());
+
+    if (emptyField) {
+      e.preventDefault();
+      alert(`${emptyField.label} wajib diisi!`);
+      return;
+    }
+  };
+
   return (
     <form>
       <div className="flex gap-10 md:flex-row flex-col ">
-        {/* LEFT */}
         <div className="flex flex-col gap-4 md:w-[50%]">
-          {/* Nama */}
           <div className="flex flex-col gap-1 ">
             <label className="text-rab-navy">
               Nama Lengkap <span className="text-red-500">*</span>
@@ -70,7 +97,6 @@ ${form.deskripsi}
             </div>
           </div>
 
-          {/* WhatsApp */}
           <div className="flex flex-col gap-1 ">
             <label className="text-rab-navy">
               Nomor whatsapp <span className="text-red-500">*</span>
@@ -90,7 +116,6 @@ ${form.deskripsi}
             </div>
           </div>
 
-          {/* Lokasi */}
           <div className="flex flex-col gap-1 ">
             <label className="text-rab-navy">
               Lokasi Proyek <span className="text-red-500">*</span>
@@ -102,7 +127,7 @@ ${form.deskripsi}
                 name="lokasi"
                 value={form.lokasi}
                 onChange={handleChange}
-                placeholder="Contoh: Jakarta selatan"
+                placeholder="Contoh: Jakarta Selatan"
                 className="p-2 outline rounded-lg outline-gray-100 bg-gray-50 w-full"
               />
 
@@ -111,9 +136,7 @@ ${form.deskripsi}
           </div>
         </div>
 
-        {/* RIGHT */}
         <div className="flex flex-col gap-4 md:w-[50%] ">
-          {/* Perusahaan */}
           <div className="flex flex-col gap-1 ">
             <label className="text-rab-navy">
               Nama Perusahaan <span className="text-red-500">*</span>
@@ -133,7 +156,6 @@ ${form.deskripsi}
             </div>
           </div>
 
-          {/* Kebutuhan */}
           <div className="flex flex-col gap-1 ">
             <label className="text-rab-navy">
               Kebutuhan <span className="text-red-500">*</span>
@@ -145,7 +167,7 @@ ${form.deskripsi}
                 name="kebutuhan"
                 value={form.kebutuhan}
                 onChange={handleChange}
-                placeholder="masukan kebutuhan anda"
+                placeholder="Masukan kebutuhan anda"
                 className="p-2 outline rounded-lg outline-gray-100 bg-gray-50 w-full"
               />
 
@@ -153,9 +175,8 @@ ${form.deskripsi}
             </div>
           </div>
 
-          {/* Estimasi */}
           <div className="flex flex-col gap-1 ">
-            <label className="text-rab-navy">estimasi luas / volume</label>
+            <label className="text-rab-navy">Estimasi luas / volume</label>
 
             <div className="relative ">
               <input
@@ -163,7 +184,7 @@ ${form.deskripsi}
                 name="estimasi"
                 value={form.estimasi}
                 onChange={handleChange}
-                placeholder="contoh : 250 M"
+                placeholder="Contoh : 250 M²"
                 className="p-2 outline rounded-lg outline-gray-100 bg-gray-50 w-full"
               />
 
@@ -173,21 +194,20 @@ ${form.deskripsi}
         </div>
       </div>
 
-      {/* Textarea */}
       <div className="mt-4">
         <textarea
           name="deskripsi"
           value={form.deskripsi}
           onChange={handleChange}
-          placeholder="jelaskan kebutuhan proyek atau material yang anda butuhkan"
+          placeholder="Jelaskan kebutuhan proyek atau material yang anda butuhkan"
           className="w-full bg-gray-100 outline p-2 outline-gray-100 min-h-20 max-h-30 rounded-lg"
         ></textarea>
       </div>
 
-      {/* Button WhatsApp */}
       <div className="md:w-[70%] md:mx-auto mt-6 ">
         <a
           href={whatsappLink}
+          onClick={handleWhatsapp}
           target="_blank"
           rel="noopener noreferrer"
           className="

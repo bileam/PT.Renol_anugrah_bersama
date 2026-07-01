@@ -1,8 +1,5 @@
 import { NavLink } from "react-router-dom";
 import logoRAB from "../assets/Logo/NobgLogo.png";
-import instagram from "../assets/sosialMedia/instagram.png";
-import email from "../assets/sosialMedia/gmail.png";
-import whatsapp from "../assets/sosialMedia/whatsapp.png";
 import { BsInstagram, BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
@@ -17,7 +14,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#0f172a] text-white">
       <div className="container mx-auto px-6 md:px-12 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-        {/* 🔹 Logo & Deskripsi */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
             <img
@@ -59,27 +55,20 @@ const Footer = () => {
             ))}
           </div>
         </div>
-
-        {/* 🔹 Kontak */}
         <div>
           <h1 className="font-bold mb-4">Hubungi Kami</h1>
 
           <div className="flex flex-col gap-3 text-gray-300 text-sm">
             <div className="flex items-center gap-2">
-              {/* <img src={whatsapp} alt="" className="w-6" />
-               */}
               <BsWhatsapp className="text-rab-green  w-5 h-5" />
               <p>+62 823-2096-0810</p>
             </div>
 
             <div className="flex items-center gap-2">
-              {/* <img src={instagram} alt="" className="w-6" />
-               */}
               <BsInstagram className="text-rab-green  w-5 h-5" />
               <p>renol_anugrah_bersama</p>
             </div>
             <div className="flex items-center gap-2">
-              {/* <img src={email} alt="" className="w-5" /> */}
               <MdEmail className="text-rab-green w-5 h-5" />
               <p className="break-all">renolanugrahbersama@gmail.com</p>
             </div>
